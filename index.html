@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock paper scissor</title>
+</head>
+
+<body>
+  <div class="indicator">
+    <h1><span>ROCK</span><span>PAPER</span><span>SCISSORS</span></h1>
+    <div class="score-card">
+      <p>SCORE</p>
+      <h1 class="score">0</h1>
+    </div>
+  </div>
+  <div class="container">
+    <div class="wrap">
+      <button class="user-picked" data-userChoice="paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
+      <button class="user-picked" data-userChoice="scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
+      <button class="user-picked" data-userChoice="rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+    </div>
+    <div class="match">
+      <div class="user-choice-wrap">
+        <h1>YOU PICKED</h1>
+        <div class="user-choice">
+          <button class="user user-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
+          <button class="user user-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
+          <button class="user user-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+        </div>
+      </div>
+      <div class="result">
+        <h1 class="ResultStatus"></h1>
+        <p onclick="playAgain()">PLAY AGAIN</p>
+      </div>
+      <div class="house-choice-wrap">
+        <h1>THE HOUSE PICKED</h1>
+        <div class="house-choice">
+          <button class="house house-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
+          <button class="house house-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
+          <button class="house house-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button onclick="ShowRules()" class="rule-btn">RULES</button>
+  <div class="rules">
+    <img onclick="closeRules()" class="closeRules" src="./images/icon-close.svg" alt="">
+    <img src="./images/image-rules.svg" alt="">
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>
