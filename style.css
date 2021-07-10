@@ -350,6 +350,10 @@ body {
   display: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 @media (max-width: 900px) {
   .score-container {
     width: 70%;
