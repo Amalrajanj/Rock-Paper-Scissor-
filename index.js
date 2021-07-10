@@ -30,6 +30,7 @@ function startGame(){
     houseChoice = houseRandom()
     playWrap.style.display = 'none'
     ResultWrap.style.display = 'grid'
+    console.log( 'index',choice.indexOf(houseChoice));
     housePick[choice.indexOf(houseChoice)].style.display = 'block'
     userPick[choice.indexOf(userChoice)].style.display = 'block'
     
@@ -58,6 +59,8 @@ function updateValue(value){
 function playAgain(){
     playWrap.style.display = 'grid'
     ResultWrap.style.display = 'none'
+    housePick[choice.indexOf(houseChoice)].style.display = 'none'
+    userPick[choice.indexOf(userChoice)].style.display = 'none'
 }
 function ruleOpen(){
     rule.style.display = 'flex'
