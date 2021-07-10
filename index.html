@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper scissor</title>
   <link rel="stylesheet" href="style.css">
-  <title>Rock paper scissor</title>
 </head>
-
 <body>
-  <div class="indicator">
+  <div class="score-container">
     <h1><span>ROCK</span><span>PAPER</span><span>SCISSORS</span></h1>
     <div class="score-card">
       <p>SCORE</p>
       <h1 class="score">0</h1>
     </div>
   </div>
-  <div class="container">
-    <div class="wrap">
-      <button class="user-picked" data-userChoice="paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
-      <button class="user-picked" data-userChoice="scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
-      <button class="user-picked" data-userChoice="rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+  <div class="interactive-container">
+    <!-- play section -->
+
+    <div class="play-wrap">
+      <div class="i-c i-c1"><button class="p-w-btn1 p-w" data-userChoice="paper"><span><img src="./images/icon-paper.svg" alt=""></span></button></div>
+      <div class="i-c i-c2"><button class="p-w-btn2 p-w" data-userChoice="scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button></div>
+      <div class="i-c i-c3"><button class="p-w-btn3 p-w" data-userChoice="rock"><span><img src="./images/icon-rock.svg" alt=""></span></button></div>
     </div>
-    <div class="match">
-      <div class="user-choice-wrap">
+
+    <!-- result  -->
+
+    <div class="result-wrap">
+      <div class="picked user-picked-wrap">
         <h1>YOU PICKED</h1>
-        <div class="user-choice">
-          <button class="user user-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
-          <button class="user user-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
-          <button class="user user-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+        <div class="wrap">
+          <button class="p-w-btn1 userPick userPick-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
+          <button class="p-w-btn2 userPick userPick-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
+          <button class="p-w-btn3 userPick userPick-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
         </div>
       </div>
-      <div class="result">
+      <div class="result-indicator">
         <h1 class="ResultStatus"></h1>
-        <p onclick="playAgain()">PLAY AGAIN</p>
+        <button onclick="playAgain()">PLAY AGAIN</button>
       </div>
-      <div class="house-choice-wrap">
+      <div class="picked house-picked-wrap">
         <h1>THE HOUSE PICKED</h1>
-        <div class="house-choice">
-          <button class="house house-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
-          <button class="house house-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
-          <button class="house house-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
+        <div class="wrap">
+          <button class="p-w-btn1 housePick housePick-paper"><span><img src="./images/icon-paper.svg" alt=""></span></button>
+          <button class="p-w-btn2 housePick housePick-scissors"><span><img src="./images/icon-scissors.svg" alt=""></span></button>
+          <button class="p-w-btn3 housePick housePick-rock"><span><img src="./images/icon-rock.svg" alt=""></span></button>
         </div>
       </div>
+      
     </div>
+
   </div>
-  <button onclick="ShowRules()" class="rule-btn">RULES</button>
   <div class="rules">
-    <img onclick="closeRules()" class="closeRules" src="./images/icon-close.svg" alt="">
+    <button onclick="ruleOpen()">RULES</button>
+  </div>
+  <div class="rule">
     <img src="./images/image-rules.svg" alt="">
+    <img onclick="ruleClose()" src="./images/icon-close.svg" alt="" class="close">
   </div>
 </body>
 <script src="./index.js"></script>
